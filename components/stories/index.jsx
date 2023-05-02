@@ -1,14 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { stories } from "../../constants/stories";
+import Story from './story';
 
 const Stories = () => {
   return (
-    <View>
-      <Text>Stories</Text>
-    </View>
-  )
-}
+    <FlatList
+      data={stories}
+      renderItem={({ item }) => <Story story={item}/>}
+      keyExtractor={(item) => item.id}
+      horizontal
+    />
+  );
+};
 
-export default Stories
+export default Stories;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
