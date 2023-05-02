@@ -5,7 +5,7 @@ export const stories = [
     id: 1,
     owner: "Akiode Timothy",
     caption: "I just dey enjoy life",
-    image: [images.image1, images.image2, images.image3],
+    image: [images.image1, images.image2, images.image3,images.image11],
   },
   {
     id: 2,
