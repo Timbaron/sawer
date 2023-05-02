@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import {Stories, Groups, Posts} from './index'
+import {Stories, Groups, Posts, Footer} from './index'
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
       <Stories />
       <Groups />
       <Posts />
+      <Footer />
     </View>
   )
 }
