@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { groups } from '../../constants/groups';
+import Group from './group';
 
 const Groups = () => {
   return (
-    <View>
-      <Text>Groups</Text>
-    </View>
+    <FlatList
+      data={groups}
+      renderItem={({ item }) => <Group group={item} />}
+      keyExtractor={(item) => item.id}
+      horizontal
+      // contentContainerStyle={styles.lists}
+      showsHorizontalScrollIndicator={false}
+    />
   )
 }
 
