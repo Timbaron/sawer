@@ -2,6 +2,7 @@ import { useState } from "react";
 import { View, Text, ScrollView, SafeAreaView } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLORS, icons, images, SIZES } from "../constants";
+import { ScreenHeaderLeft, ScreenHeaderRight } from "../components";
 
 const Home = () => {
   const router = useRouter();
@@ -14,8 +15,8 @@ const Home = () => {
             backgroundColor: COLORS.lightWhite,
           },
           headerShadowVisible: false,
-          headerLeft: () => <Text>Hello Left</Text>,
-          headerRight: () => <Text>Hello Right</Text>,
+          headerLeft: () => <ScreenHeaderLeft />,
+          headerRight: () => <ScreenHeaderRight />,
           headerTitle: "",
         }}
       />
