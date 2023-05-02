@@ -1,17 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import {Stories, Groups, Posts} from './index'
 
-const Home = () => {
+const Groups = () => {
   return (
     <View>
-      <Stories />
-      <Groups />
-      <Posts />
+      <Text>Groups</Text>
     </View>
   )
 }
 
-export default Home
+export default Groups
 
 const styles = StyleSheet.create({})

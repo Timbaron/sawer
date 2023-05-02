@@ -2,9 +2,9 @@ import { useState } from "react";
 import { View, Text, ScrollView, SafeAreaView } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { COLORS, icons, images, SIZES } from "../constants";
-import { ScreenHeaderLeft, ScreenHeaderRight } from "../components";
+import { Home, ScreenHeaderLeft, ScreenHeaderRight } from "../components";
 
-const Home = () => {
+const Index = () => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -26,10 +26,12 @@ const Home = () => {
             flex: 1,
             padding: SIZES.medium,
           }}
-        ></View>
+        >
+          <Home />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Index;
