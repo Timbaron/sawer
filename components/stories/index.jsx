@@ -10,6 +10,7 @@ import React from "react";
 import { stories } from "../../constants/stories";
 import Story from "./story";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { FONT } from "../../constants";
 
 const Stories = () => {
   return (
@@ -33,12 +34,23 @@ const listHeader = (item) => {
     console.log("View my story");
   };
   return (
-    <TouchableOpacity style={styles.container} onPress={onMyStoryPress}>
-      <Image source={stories[0].image[1]} style={styles.image} />
-      <TouchableOpacity onPress={onAddStoryPress} style={styles.icon}>
-        <Icon name="plus" size={10} color="#fff" />
+    <View style={{ alignItems: "center", justifyContent: "space-between", height:100}}>
+      <TouchableOpacity style={styles.container} onPress={onMyStoryPress}>
+        <Image source={stories[0].image[1]} style={styles.image} />
+        <TouchableOpacity onPress={onAddStoryPress} style={styles.icon}>
+          <Icon name="plus" size={10} color="#fff" />
+        </TouchableOpacity>
+        <View
+          style={{
+            height: 30,
+            alignItems: "center",
+            justifyContent: "center",
+            fontFamily: FONT.regular,
+          }}
+        ></View>
       </TouchableOpacity>
-    </TouchableOpacity>
+      <Text style={{fontFamily: FONT.medium}}>You</Text>
+    </View>
   );
 };
 
@@ -46,7 +58,7 @@ export default Stories;
 
 const styles = StyleSheet.create({
   lists: {
-    height: 80,
+    height: 100,
     justifyContent: "space-between",
     gap: 7,
   },
