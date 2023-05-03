@@ -1,0 +1,18 @@
+export const Categories = [
+  "All Posts",
+  "Technology",
+  "Travel",
+  "Food",
+  "Fashion",
+  "Sports",
+  "Entertainment",
+  "Business",
+  "Education",
+  "Health",
+  "Science",
+  "Art",
+  "Music",
+  "Politics",
+  "History",
+  "Nature",
+];
