@@ -10,7 +10,7 @@ const Groups = () => {
       renderItem={({ item }) => <Group group={item} />}
       keyExtractor={(item) => item.id}
       horizontal
-      // contentContainerStyle={styles.lists}
+      contentContainerStyle={styles.lists}
       showsHorizontalScrollIndicator={false}
     />
   )
@@ -18,4 +18,11 @@ const Groups = () => {
 
 export default Groups
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  lists: {
+    height: 100,
+    justifyContent: "space-between",
+    gap: 7,
+    marginTop: 10
+  },
+})
