@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   lists: {
-    height: 100,
+    height: 35,
     justifyContent: "space-between",
     gap: 7,
-    marginTop: 10,
+    marginTop: 7,
   },
 });
