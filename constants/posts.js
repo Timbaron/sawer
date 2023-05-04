@@ -11,6 +11,23 @@ export const posts = [
     likeCount: 56,
     commentCount: 23,
     shareCount: 10,
+    images:[
+      {
+        id: 1,
+        image: images.image12,
+        alt: 'Random Alternative'
+      },
+      {
+        id: 2,
+        image: images.image13,
+        alt: 'Random Alternative'
+      },
+      {
+        id: 3,
+        image: images.image14,
+        alt: 'Random Alternative'
+      }
+    ],
     viewCount: 345,
     content:
       "Check out this delicious pizza I made at home! It's loaded with fresh mozzarella, juicy tomatoes, and aromatic basil on top of a crispy, thin crust. I even added a touch of spicy red pepper flakes for a little extra kick. Trust me, it's the perfect comfort food for any occasion. And the best part? It's so easy to make! Just mix the dough, add the toppings, and bake in the oven. In no time, you'll have a piping hot pizza that's ready to be devoured. So, what are you waiting for? Give it a try and let me know what you think!",
@@ -25,6 +42,13 @@ export const posts = [
     likeCount: 102,
     commentCount: 42,
     shareCount: 15,
+    images:[
+      {
+        id: 1,
+        image: images.image15,
+        alt: 'Random Alternative'
+      },
+    ],
     viewCount: 789,
     content: "Just got back from an amazing trip to Japan!",
   },
@@ -51,6 +75,13 @@ export const posts = [
     likeCount: 76,
     commentCount: 35,
     shareCount: 5,
+    images:[
+      {
+        id: 1,
+        image: images.image16,
+        alt: 'Random Alternative'
+      },
+    ],
     viewCount: 567,
     content: "Loving my new outfit today!",
   },
@@ -74,10 +105,10 @@ export const posts = [
     profilePicture: images.image6,
     timePosted: "2 hours ago",
     following: true,
-    like: 152,
-    comments: 23,
-    shares: 10,
-    views: 500,
+    likeCount: 154,
+    commentCount: 23,
+    shareCount: 10,
+    viewCount: 500,
     content:
       "Check out my new outfit! I'm loving this vintage vibe. 😍 #retrofashion #ootd",
   },
@@ -88,10 +119,10 @@ export const posts = [
     profilePicture: images.image7,
     timePosted: "4 hours ago",
     following: false,
-    like: 420,
-    comments: 56,
-    shares: 20,
-    views: 800,
+    likeCount: 420,
+    commentCount: 56,
+    shareCount: 20,
+    viewCount: 800,
     content:
       "I made this amazing pasta dish from scratch tonight. It's so easy and delicious! 😋 #homemadepasta #foodie",
   },
@@ -102,10 +133,17 @@ export const posts = [
     profilePicture: images.image8,
     timePosted: "1 day ago",
     following: true,
-    like: 317,
-    comments: 41,
-    shares: 15,
-    views: 1200,
+    likeCount: 317,
+    commentCount: 41,
+    shareCount: 15,
+    viewCount: 1200,
+    images:[
+      {
+        id: 1,
+        image: images.image17,
+        alt: 'Random Alternative'
+      },
+    ],
     content:
       "Missing this beautiful view already. Can't wait to go back someday. 🌅 #santorini #travelgram",
   },
@@ -116,10 +154,17 @@ export const posts = [
     profilePicture: images.image9,
     timePosted: "3 days ago",
     following: false,
-    like: 238,
-    comments: 32,
-    shares: 8,
-    views: 700,
+    likeCount: 238,
+    commentCount: 32,
+    shareCount: 8,
+    viewCount: 700,
+    images:[
+      {
+        id: 1,
+        image: images.image19,
+        alt: 'Random Alternative'
+      },
+    ],
     content:
       "Just finished an intense workout at the gym. Feeling great! 💪 #fitnessmotivation #workout",
   },
@@ -130,10 +175,10 @@ export const posts = [
     profilePicture: images.image10,
     timePosted: "5 days ago",
     following: true,
-    like: 101,
-    comments: 14,
-    shares: 5,
-    views: 400,
+    likeCount: 101,
+    commentCount: 14,
+    shareCount: 5,
+    viewCount: 400,
     content:
       "Got my hands on the new iPhone and it's amazing! The camera is unreal. 📱 #iphone13 #tech",
   },
@@ -189,6 +234,13 @@ export const posts = [
     commentCount: 5,
     shareCount: 1,
     viewCount: 890,
+    images:[
+      {
+        id: 1,
+        image: images.image18,
+        alt: 'Random Alternative'
+      },
+    ],
     content: "Got in a good workout today 💪 #fitness #gym #workoutmotivation",
   },
   {

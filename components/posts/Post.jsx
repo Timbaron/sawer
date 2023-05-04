@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useState } from "react";
 import { COLORS, FONT, SIZES } from "../../constants";
 import Custombutton from "./custombutton";
@@ -6,8 +13,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
 const Post = ({ post }) => {
+    console.log(post.likeCount)
   const [liked, setLiked] = useState(false);
-    const [follow, setFollow] = useState(post.following);
+  const [follow, setFollow] = useState(post.following);
 
   const handleLikePress = () => {
     setLiked(!liked);
@@ -18,7 +26,7 @@ const Post = ({ post }) => {
     }
   };
   const handleFollowPress = () => {
-    setFollow(!follow)
+    setFollow(!follow);
   };
   return (
     <View style={styles.container}>
@@ -33,18 +41,28 @@ const Post = ({ post }) => {
           </View>
         </View>
         <View>
-          <Custombutton
-            following={follow}
-            onPress={handleFollowPress}
-          />
+          <Custombutton following={follow} onPress={handleFollowPress} />
         </View>
       </View>
       <View style={styles.content}>
-        <Text style={styles.contentText}>
+        {/* <Text style={styles.contentText}>
           {post.content.length > 120
             ? post.content.substr(0, 120) + "..."
             : post.content}
-        </Text>
+        </Text> */}
+        <Text style={styles.contentText}>{post.content}</Text>
+        {post.images && (
+          <FlatList
+            data={post.images}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+              <Image source={item.image} style={{ width: 200, height: 200 }} />
+            )}
+            horizontal
+            contentContainerStyle={styles.lists}
+            showsHorizontalScrollIndicator={false}
+          />
+        )}
       </View>
       <View
         style={[styles.footer, { justifyContent: "space-around", margin: 5 }]}
@@ -86,7 +104,8 @@ export default Post;
 
 const styles = StyleSheet.create({
   container: {
-    height: 170,
+    height: "auto",
+    // minHeight: 170,
     borderBottomColor: COLORS.secondary6,
     borderBottomWidth: 1,
     marginTop: 10,
@@ -133,5 +152,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: 10,
     gap: 3,
+  },
+  lists: {
+    // justifyContent: "space-between",
+    gap: 7,
+    marginTop: 10
   },
 });

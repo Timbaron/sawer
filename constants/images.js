@@ -9,8 +9,16 @@ import image8 from "../assets/images/image8.jpeg";
 import image9 from "../assets/images/image9.jpeg";
 import image10 from "../assets/images/image10.jpeg";
 import image11 from "../assets/images/test.png";
+import image12 from "../assets/images/pizza.jpg";
+import image13 from "../assets/images/pizza2.jpg";
+import image14 from "../assets/images/pizza3.jpg";
+import image15 from "../assets/images/japan.jpg";
+import image16 from "../assets/images/outfit.jpg";
+import image17 from "../assets/images/view.jpg";
+import image18 from "../assets/images/workout.jpeg";
+import image19 from "../assets/images/workout2.png";
 
-export {image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11}
+export {image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11,image12,image13,image14,image15,image16,image17,image18,image19}
 // export const images = [
 //   {
 //     id: 1,
