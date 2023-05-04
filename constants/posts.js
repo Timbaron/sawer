@@ -36,7 +36,7 @@ export const Allposts = [
     id: 2,
     category: "travel",
     name: "Sarah Lee",
-    profilePic: "images.image2",
+    profilePic: images.image2,
     timePosted: "3 days ago",
     following: false,
     likeCount: 102,
