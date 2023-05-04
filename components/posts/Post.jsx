@@ -13,7 +13,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
 const Post = ({ post }) => {
-  console.log(post.likeCount);
   const [liked, setLiked] = useState(false);
   const [follow, setFollow] = useState(post.following);
 

@@ -5,7 +5,7 @@ import { COLORS, FONT } from "../../constants";
 const FollowButton = ({onPress}) => {
   return (
     <TouchableOpacity style={styles.followButton} onPress={onPress}>
-      <Text style={styles.followButtonText}>Following</Text>
+      <Text style={styles.followButtonText}>Follow</Text>
     </TouchableOpacity>
   );
 };
