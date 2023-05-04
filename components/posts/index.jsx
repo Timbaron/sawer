@@ -6,7 +6,6 @@ import Post from "./Post";
 import { FONT } from "../../constants";
 
 const Posts = ({ posts }) => {
-  console.log(posts.length);
   return (
     <View style={{ flex: 1 }}>
       {posts.length > 0 ? (

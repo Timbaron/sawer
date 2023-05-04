@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Stories, Groups, Posts, Footer } from "./index";
 import { Categories } from "../constants/postcategories";
 import PostCategories from "./posts/categories";
 import { Allposts } from "../constants/posts";
+
 
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState("All Posts");
@@ -20,6 +21,7 @@ const Home = () => {
     }
   }, [activeCategory]);
 
+
   return (
     <View>
       <Stories />
@@ -30,11 +32,10 @@ const Home = () => {
         setActiveCategory={setActiveCategory}
       />
       <Posts posts={posts} />
-      <Footer />
+      
     </View>
   );
 };
 
 export default Home;
 
-const styles = StyleSheet.create({});
