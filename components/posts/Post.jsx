@@ -13,7 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
 const Post = ({ post }) => {
-    console.log(post.likeCount)
+  console.log(post.likeCount);
   const [liked, setLiked] = useState(false);
   const [follow, setFollow] = useState(post.following);
 
@@ -50,7 +50,19 @@ const Post = ({ post }) => {
             ? post.content.substr(0, 120) + "..."
             : post.content}
         </Text> */}
-        <Text style={styles.contentText}>{post.content}</Text>
+        <Text style={styles.contentText}>
+          {post.content.split(" ").map((word, index) => {
+            if (word.startsWith("#")) {
+              return (
+                <Text key={index} style={{ color: COLORS.primary }}>
+                  {word}{" "}
+                </Text>
+              );
+            } else {
+              return <Text key={index}>{word} </Text>;
+            }
+          })}
+        </Text>
         {post.images && (
           <FlatList
             data={post.images}
@@ -156,6 +168,6 @@ const styles = StyleSheet.create({
   lists: {
     // justifyContent: "space-between",
     gap: 7,
-    marginTop: 10
+    marginTop: 10,
   },
 });
