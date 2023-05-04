@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   category: (category, activeCategory) => ({
     color: activeCategory === category ? COLORS.primary : COLORS.secondary4,
     fontFamily: FONT.bold,
-    fontSize: activeCategory === category ? SIZES.small + 4 : SIZES.small + 2,
+    fontSize: activeCategory === category ? SIZES.small + 3 : SIZES.small + 1.6,
   }),
   categoryView: {
     height: 30,
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   },
   lists: {
     height: 35,
+    width: 'auto',
     justifyContent: "space-between",
     gap: 7,
     marginTop: 7,

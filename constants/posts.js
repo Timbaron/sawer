@@ -1,6 +1,6 @@
 import * as images from "./images";
 
-export const posts = [
+export const Allposts = [
   {
     id: 1,
     category: "food",
