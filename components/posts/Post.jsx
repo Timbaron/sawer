@@ -65,7 +65,7 @@ const Post = ({ post }) => {
         {post.images && (
           <FlatList
             data={post.images}
-            keyExtractor={(item, index) => index.toString()}
+            keyExtractor={(item, index) => item.id}
             renderItem={({ item }) => (
               <Image source={item.image} style={{ width: 200, height: 200 }} />
             )}
