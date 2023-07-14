@@ -1,10 +1,13 @@
 import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { FONT, COLORS } from "../../constants";
+import { useRouter } from "expo-router";
 
 const Group = ({ group }) => {
+  const router = useRouter();
+
   return (
-    <TouchableOpacity style={styles.mainView}>
+    <TouchableOpacity style={styles.mainView} onPress={() => router.push(`/pages/groups/${group.id}`)}>
       <ImageBackground source={group.banner} style={styles.backgroundImage}>
         <View style={styles.titleView}>
           <Text style={{ color: "white", fontFamily: FONT.bold}}>{group.title}</Text>
